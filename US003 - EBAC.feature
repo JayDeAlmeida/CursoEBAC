@@ -1,6 +1,10 @@
 #language: pt
 
-           Contexto: o cliente deve concluir o cadastro para finalizar a compra
+           Contexto:
+           Como cliente da EBAC-SHOP
+           Quero fazer concluir meu cadastro   
+           Para finalizar minha compra
+
 
             Esquema do Cenário:
             Dado que o cliente esteja na página de cadastro da EBAC-Shop
