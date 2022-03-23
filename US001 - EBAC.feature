@@ -1,41 +1,28 @@
             #language: pt
 
-            Contexto: cliente seleciona um produto na EBAC-Shop para compra
+            Contexto: 
+            Como cliente da EBAC-SHOP
+            Quero configurar meu produto de acordo com meu tamanho e gosto
+            E escolher a quantidade
+            Para depois inserir no carrinho
 
             Cenário: 1 - Venda Permitida
-            Quando eu selecionar Pullover
-            E selecionar a cor Orange
-            E selecionar o tamanho S
-            E seleciono quantidade 2
-            E coloco no carrinho
+            Quando eu selecionar o produto com cor, tamanho e quantidade especificados
+            E colocar no carrinho
+            Se for menos de 10 unidades
             Então a venda será Permitida
 
             Cenário: 2 - Venda Não Permitida
-            Quando eu selecionar Pullover
-            E selecionar a cor Orange
-            E selecionar o tamanho S
-            E seleciono <quantidade>
-            E coloco no carrinho
-            Se <quantidade> for maior que 10
+            Quando eu selecionar o produto com cor, tamanho e quantidade especificados
+            E colocar no carrinho
+            Se forem mais que 10 unidades
             Então a venda não será Permitida
-            Se <quantidade> for igual ou menor que 10
-            Então a venda será permitida
-            Exemplos:
-            |quantidade|
-            |1|
-            |2|
-            |3|
-            |5|
-            |8|
-            |13|
-            |21|
+           
 
             Cenário: 3 - Limpar Carrinho
             Quando eu selecionar Pullover
-            E selecionar a cor Orange
-            E selecionar o tamanho S
-            E seleciono quantidade 2
-            E coloco no carrinho
+            Quando eu selecionar o produto com cor, tamanho e quantidade especificados
+            E colocar no carrinho
             Se eu selecionar o botão Limpar
             Então o carrinho será esvaziado
 
